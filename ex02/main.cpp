@@ -18,12 +18,8 @@ QString processString(const QString& command, const QString& input) {
     } else if (command == "down") {
         result = convertToLower(result);
     } else {
-        // Демонстрация других функций строк
-        result = result.left(5);  // substr
-        result.append("...");     // append
-        result.insert(0, "Start: ");  // insert
-        result.replace("Start", "Begin");  // replace
-        result.remove(result.length() - 3, 3);  // erase (remove в Qt)
+
+        return QString("Error: Invalid command. Use 'up' or 'down'.");
     }
 
     return result;
